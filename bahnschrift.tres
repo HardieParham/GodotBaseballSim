@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cmksimtjge5ue"]
+
+[ext_resource type="FontFile" uid="uid://djvpmyukhwgtx" path="res://BAHNSCHRIFT.TTF" id="1_v6s3i"]
+
+[resource]
+default_font = ExtResource("1_v6s3i")
+default_font_size = 36
