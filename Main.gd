@@ -48,6 +48,8 @@ func _on_quit_but_pressed() -> void:
 func game_loop() -> void:
 	var result: int = dice_roll()
 	var outcome: String = get_outcome(result)
+	out_check()
+	tally_scores()
 	log.text = outcome
 
 func dice_roll() -> int:
@@ -63,33 +65,53 @@ func get_outcome(roll: int) -> String:
 			normal_advance(1)
 			BASES[1] += 1
 			return ("Reach on Error")
+			
 		3:
 			soft_advance()
 			BASES[1] += 1
 			return ("Hit by Pitch")
+			
 		4:
-			SCORECARD.Outs += 2
 			var runners_check = double_play()
 			return (runners_check)
+			
 		5:
 			SCORECARD.Outs += 1
 			return ("Groundout")
+			
 		6:
 			SCORECARD.Outs += 1
 			return ("Fly-Out")
+			
 		7:
 			SCORECARD.Outs += 1
 			return ("Strikeout")
+			
 		8:
+			normal_advance(1)
+			BASES[1] += 1
 			return ("Single")
+			
 		9:
+			soft_advance()
+			BASES[1] += 1
 			return ("Walk")
+			
 		10:
+			normal_advance(2)
+			BASES[2] += 1
 			return ("Double")
+			
 		11:
+			normal_advance(3)
+			BASES[3] += 1
 			return ("Triple")
+			
 		12:
+			BASES[0] = 1 + BASES[1] + BASES[2] + BASES[3]
+			clear_bases()
 			return ("Home Run!")
+			
 		_:
 			return ("What the heck happened here???")
 
@@ -135,7 +157,9 @@ func soft_advance() -> void:
 	if BASES[3] > 0:
 		BASES[0] += 1
 		BASES[3] -= 1
-	
+
+
+
 func clear_bases() -> void:
 	BASES[1] = 0; BASES[2] = 0; BASES[3] = 0
 
@@ -155,4 +179,15 @@ func double_play() -> String:
 	else:
 		SCORECARD.Outs += 1
 		return "Double-Play worthy Out"
-		
+
+func out_check():
+	if SCORECARD.Outs > 2:
+		print("Inning Over")
+	else: 
+		print("Keep Going")
+	
+func tally_scores():
+	pass
+	
+func team_check():
+	pass
