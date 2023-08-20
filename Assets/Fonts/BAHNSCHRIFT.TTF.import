@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://djvpmyukhwgtx"
-path="res://.godot/imported/BAHNSCHRIFT.TTF-b282827a9c17937e66b2ad2bd94ec0ea.fontdata"
+path="res://.godot/imported/BAHNSCHRIFT.TTF-29b57b5f7702d39ec8db6b290ea3800f.fontdata"
 
 [deps]
 
-source_file="res://BAHNSCHRIFT.TTF"
-dest_files=["res://.godot/imported/BAHNSCHRIFT.TTF-b282827a9c17937e66b2ad2bd94ec0ea.fontdata"]
+source_file="res://Assets/Fonts/BAHNSCHRIFT.TTF"
+dest_files=["res://.godot/imported/BAHNSCHRIFT.TTF-29b57b5f7702d39ec8db6b290ea3800f.fontdata"]
 
 [params]
 

@@ -1,0 +1,115 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdpppb45vt0te"]
+
+[ext_resource type="Theme" uid="uid://cmy2exropcaa1" path="res://Assets/Themes/new_theme.tres" id="1_4oo1i"]
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_y7sri"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_y7sri")
+
+[node name="BGRect" type="ColorRect" parent="."]
+z_index = -1
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0.34902, 0.309804, 0.333333, 1)
+
+[node name="PageCon" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(640, 360)
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_4oo1i")
+
+[node name="BlankLabel1" type="Label" parent="PageCon"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_4oo1i")
+
+[node name="MenuCon" type="VBoxContainer" parent="PageCon"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+theme = ExtResource("1_4oo1i")
+
+[node name="BlankLabel2" type="Label" parent="PageCon/MenuCon"]
+layout_mode = 2
+theme = ExtResource("1_4oo1i")
+
+[node name="NewGameBtn" type="Button" parent="PageCon/MenuCon"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_4oo1i")
+text = "New Game"
+
+[node name="HistoryBtn" type="Button" parent="PageCon/MenuCon"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_4oo1i")
+text = "View History"
+
+[node name="TeamACon" type="HBoxContainer" parent="PageCon/MenuCon"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_4oo1i")
+
+[node name="TeamALabel" type="Label" parent="PageCon/MenuCon/TeamACon"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_4oo1i")
+text = "Rename Team A"
+
+[node name="TeamAEdit" type="TextEdit" parent="PageCon/MenuCon/TeamACon"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme = ExtResource("1_4oo1i")
+placeholder_text = "Enter Here..."
+
+[node name="TeamABtn" type="Button" parent="PageCon/MenuCon/TeamACon"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_4oo1i")
+text = "Submit"
+
+[node name="TeamBCon" type="HBoxContainer" parent="PageCon/MenuCon"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_4oo1i")
+
+[node name="TeamBLabel" type="Label" parent="PageCon/MenuCon/TeamBCon"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_4oo1i")
+text = "Rename Team B"
+
+[node name="TeamBEdit" type="TextEdit" parent="PageCon/MenuCon/TeamBCon"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme = ExtResource("1_4oo1i")
+placeholder_text = "Enter Here..."
+
+[node name="TeamBBtn" type="Button" parent="PageCon/MenuCon/TeamBCon"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_4oo1i")
+text = "Submit"
+
+[node name="BackBtn" type="Button" parent="PageCon/MenuCon"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_4oo1i")
+text = "Resume Game"
+
+[node name="BlankLabel3" type="Label" parent="PageCon/MenuCon"]
+layout_mode = 2
+theme = ExtResource("1_4oo1i")
+
+[node name="BlankLabel4" type="Label" parent="PageCon"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_4oo1i")
+
+[connection signal="pressed" from="PageCon/MenuCon/NewGameBtn" to="." method="_on_new_game_btn_pressed"]
+[connection signal="pressed" from="PageCon/MenuCon/HistoryBtn" to="." method="_on_history_btn_pressed"]
+[connection signal="pressed" from="PageCon/MenuCon/TeamACon/TeamABtn" to="." method="_on_team_a_btn_pressed"]
+[connection signal="pressed" from="PageCon/MenuCon/TeamBCon/TeamBBtn" to="." method="_on_team_b_btn_pressed"]
+[connection signal="pressed" from="PageCon/MenuCon/BackBtn" to="." method="_on_back_btn_pressed"]
