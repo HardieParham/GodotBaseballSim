@@ -1,33 +1,48 @@
 extends Node2D
 
-@onready var teama_label: Label = $FG_Control/TopBarCon/ScoreSheetCon/TeamALabel
-@onready var teamaruns_label: Label = $FG_Control/TopBarCon/ScoreSheetCon/TeamARunsLabel
-@onready var teamahits_label: Label = $FG_Control/TopBarCon/ScoreSheetCon/TeamAHitsLabel
-@onready var teamaerrors_label: Label = $FG_Control/TopBarCon/ScoreSheetCon/TeamAErrorsLabel
+@onready var score_sheet: GridContainer = $FG_Control/TopBarCon/ScoreSheetCon
 
-@onready var teamb_label: Label = $FG_Control/TopBarCon/ScoreSheetCon/TeamBLabel
-@onready var teambruns_label: Label = $FG_Control/TopBarCon/ScoreSheetCon/TeamBRunsLabel
-@onready var teambhits_label: Label = $FG_Control/TopBarCon/ScoreSheetCon/TeamBHitsLabel
-@onready var teamberrors_label: Label = $FG_Control/TopBarCon/ScoreSheetCon/TeamBErrorsLabel
 
-@onready var innings_label: Label = $FG_Control/TopBarCon/ScoreSheetCon/InningsAmountLabel
-@onready var top_bot_inning_label: Label = $FG_Control/TopBarCon/ScoreSheetCon/InningTopBotLabel
-
-@onready var outs1_label: Label = $FG_Control/TopBarCon/DetailsCon/AtBatCon/AtBatDetailsCon/Outs1Label
-@onready var outs2_label: Label = $FG_Control/TopBarCon/DetailsCon/AtBatCon/AtBatDetailsCon/Outs2Label
-
-@onready var home_img: ColorRect = $FG_Control/TopBarCon/DetailsCon/FieldRect/HomeRect
-@onready var base1_img: ColorRect = $"FG_Control/TopBarCon/DetailsCon/FieldRect/1BRect"
-@onready var base2_img: ColorRect = $"FG_Control/TopBarCon/DetailsCon/FieldRect/2BRect"
-@onready var base3_img: ColorRect = $"FG_Control/TopBarCon/DetailsCon/FieldRect/3BRect"
-
-@onready var log_label: Label = $FG_Control/TopBarCon/DetailsCon/AtBatCon/LogLabel
+#
+#
+#@onready var teama_label: Label = $FG_Control/TopBarCon/ScoreSheetCon/TeamALabel
+#@onready var teamaruns_label: Label = $FG_Control/TopBarCon/ScoreSheetCon/TeamARunsLabel
+#@onready var teamahits_label: Label = $FG_Control/TopBarCon/ScoreSheetCon/TeamAHitsLabel
+#@onready var teamaerrors_label: Label = $FG_Control/TopBarCon/ScoreSheetCon/TeamAErrorsLabel
+#
+#@onready var teamb_label: Label = $FG_Control/TopBarCon/ScoreSheetCon/TeamBLabel
+#@onready var teambruns_label: Label = $FG_Control/TopBarCon/ScoreSheetCon/TeamBRunsLabel
+#@onready var teambhits_label: Label = $FG_Control/TopBarCon/ScoreSheetCon/TeamBHitsLabel
+#@onready var teamberrors_label: Label = $FG_Control/TopBarCon/ScoreSheetCon/TeamBErrorsLabel
+#
+#@onready var innings_label: Label = $FG_Control/TopBarCon/ScoreSheetCon/InningsAmountLabel
+#@onready var top_bot_inning_label: Label = $FG_Control/TopBarCon/ScoreSheetCon/InningTopBotLabel
+#
+#@onready var outs1_label: Label = $FG_Control/TopBarCon/DetailsCon/AtBatCon/AtBatDetailsCon/Outs1Label
+#@onready var outs2_label: Label = $FG_Control/TopBarCon/DetailsCon/AtBatCon/AtBatDetailsCon/Outs2Label
+#
+#@onready var home_img: ColorRect = $FG_Control/TopBarCon/DetailsCon/FieldRect/HomeRect
+#@onready var base1_img: ColorRect = $"FG_Control/TopBarCon/DetailsCon/FieldRect/1BRect"
+#@onready var base2_img: ColorRect = $"FG_Control/TopBarCon/DetailsCon/FieldRect/2BRect"
+#@onready var base3_img: ColorRect = $"FG_Control/TopBarCon/DetailsCon/FieldRect/3BRect"
+#
+#@onready var log_label: Label = $FG_Control/TopBarCon/DetailsCon/AtBatCon/LogLabel
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	teama_label.text = str(Globals.teama_name)
-	teamb_label.text = str(Globals.teamb_name)
+#	teama_label.text = str(Globals.teama_name)
+#	teamb_label.text = str(Globals.teamb_name)
+	var label_dict: Dictionary = {}
+	var i = 0
+	for item in score_sheet.get_children():
+		print(item)
+		var label_name = "Label" + str(i)
+		i += 1 
+		label_dict[label_name] = item
+	print(label_dict)
+	label_dict["Label1"].text = "Hello"
+	print('hi')
 	
 	if Globals.start_new_game == true:
 		start_new_game()
@@ -47,9 +62,10 @@ func _on_quit_btn_pressed() -> void:
 
 
 func start_new_game() -> void:
-	log_label.text = "New Game Started!"
-	innings_label.text = "1"
-	home_img.visible = true
+#	log_label.text = "New Game Started!"
+#	innings_label.text = "1"
+#	home_img.visible = true
+	pass
 
 
 func _on_sim_at_bat_btn_pressed() -> void:
