@@ -107,8 +107,7 @@ text = "Last"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-disabled = true
-text = "Next"
+text = "Quit"
 
 [node name="TitleMarginContainer" type="MarginContainer" parent="VBoxContainer/HeaderContainer/HeaderHBoxContainer"]
 layout_mode = 2

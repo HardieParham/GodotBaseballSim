@@ -50,7 +50,7 @@ func _on_button_4_pressed():
 
 
 func _on_button_5_pressed():
-	display_debug("Fourth Button was pressed!")
+	get_tree().quit()
 
 
 func _on_button_6_pressed():
