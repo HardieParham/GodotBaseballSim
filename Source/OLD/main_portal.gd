@@ -1,5 +1,4 @@
 extends Control
-class_name MainPortal
 
 @onready var fps_label : Label = $VBoxContainer/FooterContainer/FooterHBoxContainer/FPSMarginContainer/FpsLabel
 @onready var debug_label : Label = $VBoxContainer/FooterContainer/FooterHBoxContainer/DebugLabelMarginContainer/DebugLabel

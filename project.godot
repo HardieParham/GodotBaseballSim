@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="BaseballSim"
-run/main_scene="res://Source/Menus/MainMenu/main_menu.tscn"
+run/main_scene="res://Source/MainPortal/main_portal.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
 boot_splash/show_image=false
@@ -29,3 +29,7 @@ window/vsync/vsync_mode=0
 [dotnet]
 
 project/assembly_name="231231 Test"
+
+[gui]
+
+theme/custom_font="res://Assets/Fonts/BAHNSCHRIFT.TTF"

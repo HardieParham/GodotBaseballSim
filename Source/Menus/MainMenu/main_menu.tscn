@@ -1,90 +1,51 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvh0d64uxyrsv"]
+[gd_scene load_steps=2 format=3 uid="uid://cw3d877wi7d7c"]
 
-[ext_resource type="Script" path="res://Source/Menus/MainMenu/main_menu.gd" id="1_v1bie"]
-[ext_resource type="Texture2D" uid="uid://k5oxt63srwpv" path="res://Assets/Images/icon.svg" id="2_oghi1"]
+[ext_resource type="Script" path="res://Source/Menus/MainMenu/main_menu.gd" id="1_scdim"]
 
-[node name="MainMenu" type="Control"]
+[node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = -169.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_v1bie")
+script = ExtResource("1_scdim")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-visible = false
-show_behind_parent = true
-z_index = -1
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_oghi1")
+theme_override_constants/margin_left = 330
+theme_override_constants/margin_top = 101
+theme_override_constants/margin_right = 330
+theme_override_constants/margin_bottom = 101
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
 
-[node name="PanelContainer2" type="PanelContainer" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/PanelContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.0
-
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/PanelContainer2/VBoxContainer"]
+[node name="BtnNewGame" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-
-[node name="Label" type="Label" parent="HBoxContainer/PanelContainer2/VBoxContainer/MarginContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 80
-text = "Untitled Sports Game"
-horizontal_alignment = 1
-
-[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/PanelContainer2/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/margin_left = 25
-theme_override_constants/margin_top = 25
-theme_override_constants/margin_right = 25
-theme_override_constants/margin_bottom = 25
-
-[node name="NewButton" type="Button" parent="HBoxContainer/PanelContainer2/VBoxContainer/MarginContainer2"]
-layout_mode = 2
 theme_override_font_sizes/font_size = 48
 text = "New Game"
 
-[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/PanelContainer2/VBoxContainer"]
+[node name="BtnOptions" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/margin_left = 25
-theme_override_constants/margin_top = 25
-theme_override_constants/margin_right = 25
-theme_override_constants/margin_bottom = 25
+theme_override_font_sizes/font_size = 48
+disabled = true
+text = "Options"
 
-[node name="QuitButton" type="Button" parent="HBoxContainer/PanelContainer2/VBoxContainer/MarginContainer3"]
+[node name="BtnQuit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_font_sizes/font_size = 48
 text = "Quit"
 
-[node name="PanelContainer3" type="PanelContainer" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[connection signal="pressed" from="HBoxContainer/PanelContainer2/VBoxContainer/MarginContainer2/NewButton" to="." method="_on_new_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/PanelContainer2/VBoxContainer/MarginContainer3/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BtnNewGame" to="." method="_on_btn_new_game_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BtnOptions" to="." method="_on_btn_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BtnQuit" to="." method="_on_btn_quit_pressed"]
