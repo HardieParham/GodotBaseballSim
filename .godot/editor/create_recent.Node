@@ -1,11 +1,11 @@
+HBoxContainer
+Label
 Button
-TextureRect
 CheckButton
+LineEdit
+TextureRect
 VBoxContainer
 MarginContainer
-Label
-LineEdit
-HBoxContainer
 PanelContainer
 MenuButton
 Container

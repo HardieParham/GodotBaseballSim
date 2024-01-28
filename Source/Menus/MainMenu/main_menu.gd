@@ -22,7 +22,8 @@ func _on_btn_new_game_pressed() -> void:
 
 func _on_btn_options_pressed() -> void:
 	MainPortal.debug_text = "Opened options menu."
-	MainPortal.content_scene = "res://Source/Menus/Options/option_menu.tscn"
+	var new_node = load("res://Source/Menus/Options/option_menu.tscn").instantiate()
+	Signals.ConnectMenu.emit(new_node)
 
 
 func _on_btn_quit_pressed() -> void:

@@ -13,6 +13,7 @@ func _process(delta : float) -> void:
 	pass
 
 
-func _on_button_pressed():
-	MainPortal.debug_text = "Option menu left."
-	MainPortal.content_scene = "res://Source/Menus/MainMenu/main_menu.tscn"
+func _on_btn_back_pressed():
+	MainPortal.debug_text = "Options menu exited."
+	var new_node = load("res://Source/Menus/MainMenu/main_menu.tscn").instantiate()
+	Signals.ConnectMenu.emit(new_node)

@@ -21,7 +21,7 @@ boot_splash/minimum_display_time=1250
 
 [autoload]
 
-Poop="*res://Source/poop.gd"
+Signals="*res://Source/Singletons/signals.gd"
 
 [display]
 
