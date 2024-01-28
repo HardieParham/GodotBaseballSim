@@ -5,6 +5,7 @@ extends Control
 @onready var btn_options : Button = $MarginContainer/VBoxContainer/BtnOptions
 @onready var btn_quit : Button = $MarginContainer/VBoxContainer/BtnQuit
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -16,11 +17,12 @@ func _process(_delta : float) -> void:
 
 
 func _on_btn_new_game_pressed() -> void:
-	MainPortal.debug_text = "New game initiated"
+	MainPortal.debug_text = "New game initiated."
 
 
 func _on_btn_options_pressed() -> void:
-	MainPortal.debug_text = "How did this happen?"
+	MainPortal.debug_text = "Opened options menu."
+	MainPortal.content_scene = "res://Source/Menus/Options/option_menu.tscn"
 
 
 func _on_btn_quit_pressed() -> void:

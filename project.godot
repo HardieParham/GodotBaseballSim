@@ -19,6 +19,10 @@ boot_splash/image="res://Assets/Images/Logo1.png"
 config/icon="res://Assets/Images/Logo1.png"
 boot_splash/minimum_display_time=1250
 
+[autoload]
+
+Poop="*res://Source/poop.gd"
+
 [display]
 
 window/size/viewport_width=1920

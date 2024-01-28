@@ -21,3 +21,5 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Back
 "
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
