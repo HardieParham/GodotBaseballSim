@@ -14,6 +14,7 @@ static var DEBUG : bool = false
 
 @onready var main_container : Container = $VBoxContainer/MainContainer
 @onready var last_scene = ""
+@onready var die = Dice.new(6)
 
 
 func _ready() -> void:
@@ -30,7 +31,15 @@ func _process(_delta : float) -> void:
 
 
 func deprint(new_text : String) -> void:
-	debug_text = new_text
+	print(new_text)
+	print(new_text == "roll")
+	if new_text == "roll":
+		var res = die.double_roll()
+		print(res)
+		debug_text = "Roll was " + str(res)
+		
+	else:
+		debug_text = new_text
 
 
 func change_scene(new_node : Node) -> void:

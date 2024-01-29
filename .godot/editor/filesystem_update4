@@ -5,3 +5,4 @@ res://Source/Singletons/signals.gd
 res://Source/MainPortal/main_portal.gd
 res://Source/Menus/MainMenu/main_menu.gd
 res://Source/Menus/Options/option_menu.gd
+res://Source/Utilities/dice.gd
