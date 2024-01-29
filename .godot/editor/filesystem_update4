@@ -1,2 +1,8 @@
-res://Scenes/main.tscn
-res://Scenes/menu.tscn
+res://Source/MainPortal/main_portal.tscn
+res://Source/Menus/MainMenu/main_menu.tscn
+res://Source/Menus/Options/option_menu.tscn
+res://Source/Singletons/signals.gd
+res://Source/MainPortal/main_portal.gd
+res://Source/Menus/MainMenu/main_menu.gd
+res://Source/Menus/Options/option_menu.gd
+res://Source/Utilities/dice.gd
