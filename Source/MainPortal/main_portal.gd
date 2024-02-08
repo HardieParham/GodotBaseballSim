@@ -47,7 +47,6 @@ func change_scene(new_node : Node) -> void:
 		for index in main_container.get_children():
 			main_container.remove_child(index)
 	main_container.add_child(new_node)
-	
 
 
 func _on_debug_toggle_toggled(toggled_on : bool) -> void:

@@ -1,1 +1,5 @@
 res://Source/MainPortal/main_portal.tscn
+res://Source/Utilities/dice.gd
+res://Source/Menus/MainMenu/main_menu.gd
+res://Source/MainPortal/main_portal.gd
+res://Source/Menus/Options/option_menu.gd
