@@ -23,6 +23,6 @@ func double_roll() -> int:
 func number_roll(times) -> int:
 	var x : int
 	var i : int = 0
-	
+	print(CallableFunctions.function_dict)
 	x = randi_range(1, _sides) * int(times)
 	return x

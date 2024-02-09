@@ -36,7 +36,7 @@ func _on_debug_input_text_submitted(input_text : String):
 	func_name = input_array.pop_front()
 	if func_name in CallableFunctions.function_dict.keys():
 		var function : Callable
-		var result : int
+		var result : Variant
 		function = CallableFunctions.function_dict[func_name]
 		
 		if input_array.size() == 0:

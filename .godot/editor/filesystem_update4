@@ -1,3 +1,4 @@
 res://Source/MainPortal/main_portal.tscn
 res://Source/MainPortal/debug_script.gd
 res://Source/Utilities/dice.gd
+res://Source/Singletons/callable_functions.gd
