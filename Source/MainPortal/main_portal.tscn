@@ -87,4 +87,4 @@ size_flags_horizontal = 3
 text = "FPS: 0000"
 
 [connection signal="toggled" from="VBoxContainer/FooterContainer/HBoxContainer/DebugToggle" to="VBoxContainer/FooterContainer" method="_on_debug_toggle_toggled"]
-[connection signal="text_submitted" from="VBoxContainer/FooterContainer/HBoxContainer/DebugInput" to="." method="deprint"]
+[connection signal="text_submitted" from="VBoxContainer/FooterContainer/HBoxContainer/DebugInput" to="VBoxContainer/FooterContainer" method="_on_debug_input_text_submitted"]

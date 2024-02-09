@@ -27,3 +27,15 @@ func _on_debug_toggle_toggled(toggled_on : bool) -> void:
 		debug_input.visible = false
 		debug_label.visible = false
 		fps_label.visible = false
+
+
+func _on_debug_input_text_submitted(input_text : String):
+	if input_text in CallableFunctions.function_dict.keys():
+		var function : Callable
+		var result : int
+		function = CallableFunctions.function_dict[input_text]
+		result = function.call()
+		DebugScript.debug_text = str(result)
+	
+	else:
+		DebugScript.debug_text = "Not a valid function"
