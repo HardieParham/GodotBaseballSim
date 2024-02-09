@@ -1,8 +1,3 @@
 res://Source/MainPortal/main_portal.tscn
-res://Source/Utilities/dice.gd
-res://Source/Menus/MainMenu/main_menu.gd
-res://Source/MainPortal/main_portal.gd
-res://Source/Menus/Options/option_menu.gd
 res://Source/MainPortal/debug_script.gd
-res://Source/Singletons/callable_functions.gd
-res://Source/Singletons/signals.gd
+res://Source/Utilities/dice.gd

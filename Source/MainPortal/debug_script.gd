@@ -30,12 +30,22 @@ func _on_debug_toggle_toggled(toggled_on : bool) -> void:
 
 
 func _on_debug_input_text_submitted(input_text : String):
-	if input_text in CallableFunctions.function_dict.keys():
+	var input_array : Array
+	var func_name : String
+	input_array = input_text.split(" ")
+	func_name = input_array.pop_front()
+	if func_name in CallableFunctions.function_dict.keys():
 		var function : Callable
 		var result : int
-		function = CallableFunctions.function_dict[input_text]
-		result = function.call()
-		DebugScript.debug_text = str(result)
+		function = CallableFunctions.function_dict[func_name]
+		
+		if input_array.size() == 0:
+			result = function.call()
+			DebugScript.debug_text = str(result)
+			
+		else: 
+			result = function.callv(input_array)
+			DebugScript.debug_text = str(result)
 	
 	else:
 		DebugScript.debug_text = "Not a valid function"

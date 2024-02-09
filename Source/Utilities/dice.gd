@@ -20,10 +20,9 @@ func double_roll() -> int:
 	return x + y
 
 
-func number_roll(times: int) -> int:
+func number_roll(times) -> int:
 	var x : int
 	var i : int = 0
-	while i < times:
-		x += randi_range(1, _sides)
-		i += 1
+	
+	x = randi_range(1, _sides) * int(times)
 	return x
