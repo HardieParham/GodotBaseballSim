@@ -10,6 +10,7 @@ func _init(sides):
 	CallableFunctions.register_function(double_roll, "double_roll")
 	CallableFunctions.register_function(number_roll, "number_roll")
 
+
 func roll() -> int:
 	return randi_range(1, _sides)
 
@@ -23,6 +24,7 @@ func double_roll() -> int:
 func number_roll(times) -> int:
 	var x : int
 	var i : int = 0
-	print(CallableFunctions.function_dict)
-	x = randi_range(1, _sides) * int(times)
+	while i < int(times):
+		x += randi_range(1, _sides)
+		i += 1
 	return x

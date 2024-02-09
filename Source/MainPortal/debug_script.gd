@@ -33,7 +33,7 @@ func _on_debug_input_text_submitted(input_text : String):
 	var input_array : Array
 	var func_name : String
 	input_array = input_text.split(" ")
-	func_name = input_array.pop_front()
+	func_name = input_array.pop_front().to_lower()
 	if func_name in CallableFunctions.function_dict.keys():
 		var function : Callable
 		var result : Variant
