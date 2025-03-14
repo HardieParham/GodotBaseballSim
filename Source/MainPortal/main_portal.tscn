@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cbx2o5vsv105b"]
 
-[ext_resource type="Script" path="res://Source/MainPortal/main_portal.gd" id="1_w3m10"]
+[ext_resource type="Script" uid="uid://chvdaugf043n7" path="res://Source/MainPortal/main_portal.gd" id="1_w3m10"]
 [ext_resource type="Texture2D" uid="uid://b4mrb6f8g57dj" path="res://Assets/Images/Baseball1.jpeg" id="2_k546r"]
-[ext_resource type="Script" path="res://Source/MainPortal/debug_script.gd" id="3_xy5yv"]
+[ext_resource type="Script" uid="uid://cjsx33q8qv6ko" path="res://Source/MainPortal/debug_script.gd" id="3_xy5yv"]
 
 [node name="MainPortal" type="Control"]
 layout_mode = 3

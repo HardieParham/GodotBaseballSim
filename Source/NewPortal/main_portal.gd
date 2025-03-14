@@ -70,4 +70,3 @@ func _on_btn_quit_pressed():
 func _on_btn_db_pressed():
 	var poop = load("res://Source/Menus/db.gd")
 	poop.test()
-
