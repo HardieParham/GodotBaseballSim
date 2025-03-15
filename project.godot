@@ -10,35 +10,10 @@ config_version=5
 
 [application]
 
-config/name="BaseballSim"
-run/main_scene="res://Source/MainPortal/main_portal.tscn"
+config/name="New Game Project"
 config/features=PackedStringArray("4.4", "Forward Plus")
-boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
-boot_splash/show_image=false
-boot_splash/image="res://Assets/Images/Logo1.png"
-config/icon="res://Assets/Images/Logo1.png"
-boot_splash/minimum_display_time=1250
-
-[autoload]
-
-Signals="*res://Source/Singletons/signals.gd"
-CallableFunctions="*res://Source/Singletons/callable_functions.gd"
-
-[display]
-
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-window/stretch/mode="canvas_items"
-window/vsync/vsync_mode=0
-
-[dotnet]
-
-project/assembly_name="231231 Test"
+config/icon="res://icon.svg"
 
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/gut/plugin.cfg", "res://addons/script-ide/plugin.cfg")
-
-[gui]
-
-theme/custom_font="res://Assets/Fonts/BAHNSCHRIFT.TTF"

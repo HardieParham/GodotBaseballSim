@@ -1,6 +1,5 @@
-res://Source/MainPortal/main_portal.tscn
-res://Source/Menus/MainMenu/main_menu.tscn
-res://Source/Menus/Options/option_menu.tscn
-res://Source/NewPortal/main_portal.tscn
-res://Source/MainPortal/main_portal.gd
-res://Source/NewPortal/main_portal.gd
+res://main_menu.tscn
+res://test_menu.tscn
+res://player.gd
+res://test_menu.gd
+res://tests/test_player.gd

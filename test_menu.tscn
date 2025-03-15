@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4w02yg6yn58"]
+
+[sub_resource type="GDScript" id="GDScript_4ykyu"]
+script/source = "extends GutTest
+
+var Player = load(\"res://player.gd\")
+
+func test_something():
+	var _player = Player.new()
+	assert_eq(_player.get_player_name, \"Name\")
+"
+
+[node name="TestMenu" type="Node2D"]
+script = SubResource("GDScript_4ykyu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="CanvasLayer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Add Player"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "No Players"
+horizontal_alignment = 1
+vertical_alignment = 1

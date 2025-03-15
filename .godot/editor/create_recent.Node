@@ -1,14 +1,6 @@
-Node
 HBoxContainer
 Label
-Button
-CheckButton
-LineEdit
-TextureRect
-VBoxContainer
-MarginContainer
-PanelContainer
-MenuButton
+CanvasLayer
 Container
-NinePatchRect
-VSeparator
+Button
+VBoxContainer
