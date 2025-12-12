@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://k5rqmwdtl0cw"
-path="res://.godot/imported/kenvector_future.ttf-5d48a921b97c624babb46a2fc0dd3a84.fontdata"
+uid="uid://bm6r0ytl5riyf"
+path="res://.godot/imported/kenvector_future.ttf-60fe615a61aeb798b1520cfd02e7bfc0.fontdata"
 
 [deps]
 
-source_file="res://Assets/Fonts/kenvector_future.ttf"
-dest_files=["res://.godot/imported/kenvector_future.ttf-5d48a921b97c624babb46a2fc0dd3a84.fontdata"]
+source_file="res://assets/fonts/kenvector_future.ttf"
+dest_files=["res://.godot/imported/kenvector_future.ttf-60fe615a61aeb798b1520cfd02e7bfc0.fontdata"]
 
 [params]
 
@@ -21,8 +21,9 @@ msdf_pixel_range=8
 msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
+modulate_color_glyphs=false
 hinting=1
-subpixel_positioning=1
+subpixel_positioning=4
 keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null

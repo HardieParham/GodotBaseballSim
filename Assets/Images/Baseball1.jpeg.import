@@ -2,22 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4mrb6f8g57dj"
-path="res://.godot/imported/Baseball1.jpeg-e0168d7db89bd89b829869cc910570b0.ctex"
+uid="uid://dmva58gelgelr"
+path="res://.godot/imported/Baseball1.jpeg-43d82fff6f4d48948ea4cf7ecb4fa20c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Baseball1.jpeg"
-dest_files=["res://.godot/imported/Baseball1.jpeg-e0168d7db89bd89b829869cc910570b0.ctex"]
+source_file="res://assets/images/Baseball1.jpeg"
+dest_files=["res://.godot/imported/Baseball1.jpeg-43d82fff6f4d48948ea4cf7ecb4fa20c.ctex"]
 
 [params]
 
 compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -25,6 +27,10 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

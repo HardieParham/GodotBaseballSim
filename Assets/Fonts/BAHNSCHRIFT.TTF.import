@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bt001ig48b1mw"
-path="res://.godot/imported/BAHNSCHRIFT.TTF-29b57b5f7702d39ec8db6b290ea3800f.fontdata"
+uid="uid://df4tn4pmaw4ie"
+path="res://.godot/imported/BAHNSCHRIFT.TTF-d6282861ea1d10665b9b96373057edc0.fontdata"
 
 [deps]
 
-source_file="res://Assets/Fonts/BAHNSCHRIFT.TTF"
-dest_files=["res://.godot/imported/BAHNSCHRIFT.TTF-29b57b5f7702d39ec8db6b290ea3800f.fontdata"]
+source_file="res://assets/fonts/BAHNSCHRIFT.TTF"
+dest_files=["res://.godot/imported/BAHNSCHRIFT.TTF-d6282861ea1d10665b9b96373057edc0.fontdata"]
 
 [params]
 
@@ -21,8 +21,9 @@ msdf_pixel_range=8
 msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
+modulate_color_glyphs=false
 hinting=1
-subpixel_positioning=1
+subpixel_positioning=4
 keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null
