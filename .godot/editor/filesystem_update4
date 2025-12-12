@@ -1,1 +1,4 @@
 res://source/pages/components/footer/footer.tscn
+res://source/pages/components/page/page.gd
+res://source/pages/components/navbar/navbar.tscn
+res://source/pages/menus/main_menu/main_menu.tscn
