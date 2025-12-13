@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1wknwb87ien"]
+[gd_scene load_steps=7 format=3 uid="uid://b1wknwb87ien"]
 
 [ext_resource type="Script" uid="uid://b8w6tfhr52j7d" path="res://source/ui/templates/page/page.gd" id="1_rgs33"]
+[ext_resource type="Texture2D" uid="uid://ol20bgbstk4m" path="res://assets/images/Baseball1.jpeg" id="2_8ray3"]
 [ext_resource type="PackedScene" uid="uid://bp12hldt2mtxq" path="res://source/ui/templates/navbar/navbar.tscn" id="2_yf0wl"]
 [ext_resource type="PackedScene" uid="uid://hhk3ntfnj477" path="res://source/ui/templates/footer/footer.tscn" id="3_yf0wl"]
+[ext_resource type="Texture2D" uid="uid://cbip2qtg01yeu" path="res://assets/images/logo.png" id="4_s2fnd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mcpvh"]
+texture = ExtResource("2_8ray3")
+modulate_color = Color(0.29954746, 0.29954746, 0.29954743, 1)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -21,6 +27,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_mcpvh")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
 layout_mode = 2
@@ -30,10 +37,69 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 1.5
 
-[node name="Control" type="Control" parent="PanelContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 17.0
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 75
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 75
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 14.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 130
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 130
+theme_override_constants/margin_bottom = 100
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("4_s2fnd")
+expand_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "Continue Game"
+
+[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "New Game"
+
+[node name="Button3" type="Button" parent="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "Options"
+
+[node name="Button4" type="Button" parent="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "Credits / About"
 
 [node name="Footer" parent="PanelContainer/VBoxContainer" instance=ExtResource("3_yf0wl")]
 layout_mode = 2
