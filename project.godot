@@ -17,7 +17,7 @@ config/features=PackedStringArray("4.5", "Forward Plus")
 boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
 boot_splash/show_image=false
 boot_splash/image="res://Assets/Images/Logo1.png"
-config/icon="uid://dh8xutpwhypp2"
+config/icon="uid://cbip2qtg01yeu"
 boot_splash/minimum_display_time=1250
 
 [autoload]
