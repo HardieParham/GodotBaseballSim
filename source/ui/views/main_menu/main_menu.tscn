@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://b1wknwb87ien"]
 
-[ext_resource type="Script" uid="uid://b8w6tfhr52j7d" path="res://source/pages/components/page/page.gd" id="1_rgs33"]
-[ext_resource type="PackedScene" uid="uid://bp12hldt2mtxq" path="res://source/pages/components/navbar/navbar.tscn" id="2_yf0wl"]
-[ext_resource type="PackedScene" uid="uid://hhk3ntfnj477" path="res://source/pages/components/footer/footer.tscn" id="3_yf0wl"]
+[ext_resource type="Script" uid="uid://b8w6tfhr52j7d" path="res://source/ui/templates/page/page.gd" id="1_rgs33"]
+[ext_resource type="PackedScene" uid="uid://bp12hldt2mtxq" path="res://source/ui/templates/navbar/navbar.tscn" id="2_yf0wl"]
+[ext_resource type="PackedScene" uid="uid://hhk3ntfnj477" path="res://source/ui/templates/footer/footer.tscn" id="3_yf0wl"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3

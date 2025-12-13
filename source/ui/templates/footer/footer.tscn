@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://hhk3ntfnj477"]
 
-[ext_resource type="Script" uid="uid://c0kh06y2w3ic7" path="res://source/pages/components/footer/footer.gd" id="1_yqt2q"]
+[ext_resource type="Script" uid="uid://c0kh06y2w3ic7" path="res://source/ui/templates/footer/footer.gd" id="1_yqt2q"]
 
 [node name="Footer" type="Control"]
 layout_mode = 3

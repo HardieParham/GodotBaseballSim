@@ -7,8 +7,8 @@ enum SceneName {
 }
 
 var scenes := {
-	SceneName.Main: "res://source/pages/menus/main_menu/main_menu.tscn",
-	SceneName.TestPage: "res://source/pages/test_page/test_page.tscn",
+	SceneName.Main: "res://source/ui/views/main_menu/main_menu.tscn",
+	SceneName.TestPage: "res://source/ui/views/test_page/test_page.tscn",
 }
 
 

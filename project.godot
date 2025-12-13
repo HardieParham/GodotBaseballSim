@@ -46,7 +46,7 @@ folder_colors={
 "res://assets/": "orange",
 "res://source/": "red",
 "res://source/managers/": "purple",
-"res://source/pages/": "green"
+"res://source/ui/": "green"
 }
 
 [gui]

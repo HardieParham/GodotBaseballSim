@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://ts37a1c64u4s"]
 
-[ext_resource type="Script" uid="uid://daa5brds05a2o" path="res://source/pages/test_page/test_page.gd" id="1_gdspn"]
-[ext_resource type="PackedScene" uid="uid://bp12hldt2mtxq" path="res://source/pages/components/navbar/navbar.tscn" id="2_smisp"]
-[ext_resource type="PackedScene" uid="uid://hhk3ntfnj477" path="res://source/pages/components/footer/footer.tscn" id="3_qrv5u"]
+[ext_resource type="Script" uid="uid://daa5brds05a2o" path="res://source/ui/views/test_page/test_page.gd" id="1_gdspn"]
+[ext_resource type="PackedScene" uid="uid://bp12hldt2mtxq" path="res://source/ui/templates/navbar/navbar.tscn" id="2_smisp"]
+[ext_resource type="PackedScene" uid="uid://hhk3ntfnj477" path="res://source/ui/templates/footer/footer.tscn" id="3_qrv5u"]
 
 [node name="TestPage" type="Control"]
 layout_mode = 3
