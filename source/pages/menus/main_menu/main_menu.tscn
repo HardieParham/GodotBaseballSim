@@ -28,12 +28,14 @@ layout_mode = 2
 [node name="Navbar" parent="PanelContainer/VBoxContainer" instance=ExtResource("2_yf0wl")]
 layout_mode = 2
 size_flags_vertical = 3
+size_flags_stretch_ratio = 1.5
 
 [node name="Control" type="Control" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 7.0
+size_flags_stretch_ratio = 17.0
 
 [node name="Footer" parent="PanelContainer/VBoxContainer" instance=ExtResource("3_yf0wl")]
 layout_mode = 2
 size_flags_vertical = 3
+size_flags_stretch_ratio = 0.75

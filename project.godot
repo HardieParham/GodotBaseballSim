@@ -18,18 +18,17 @@ boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
 boot_splash/show_image=false
 boot_splash/image="res://Assets/Images/Logo1.png"
 config/icon="uid://dh8xutpwhypp2"
-config/windows_native_icon="res://assets/images/logo.ico"
 boot_splash/minimum_display_time=1250
 
 [autoload]
 
-Signals="*res://Source/Singletons/signals.gd"
-CallableFunctions="*res://Source/Singletons/callable_functions.gd"
+QueryManager="*res://source/managers/query_manager.gd"
+SceneManager="*res://source/managers/scene_manager.gd"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="viewport"
 window/vsync/vsync_mode=0
 
@@ -39,13 +38,15 @@ project/assembly_name="231231 Test"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/gut/plugin.cfg", "res://addons/plenticons/plugin.cfg", "res://addons/script-ide/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot-sqlite/plugin.cfg", "res://addons/gut/plugin.cfg", "res://addons/plenticons/plugin.cfg", "res://addons/script-ide/plugin.cfg")
 
 [file_customization]
 
 folder_colors={
 "res://assets/": "orange",
-"res://source/": "green"
+"res://source/": "red",
+"res://source/managers/": "purple",
+"res://source/pages/": "green"
 }
 
 [gui]
