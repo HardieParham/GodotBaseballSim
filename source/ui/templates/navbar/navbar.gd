@@ -23,11 +23,13 @@ func _on_home_button_pressed() -> void:
 
 
 func _on_main_menu_button_pressed() -> void:
-	# PageManager.go_to_scene(MainMenu)
-	pass # Replace with function body.
+	print('Main Menu')
+	var context = {"title": "Main Menu"}
+	SceneManager.go_to_scene(SceneManager.SceneName.MainMenu, context)
 
 
 func _on_options_button_pressed() -> void:
+	print('Test Page')
 	var context = {"title": "Poop"}
 	SceneManager.go_to_scene(SceneManager.SceneName.TestPage, context)
 

@@ -1,6 +1,5 @@
 extends Control
 
-var debug_mode: bool = false
 
 @onready var debug_static_label: Label = %DebugStaticLabel
 @onready var debug_check_button: CheckButton = %DebugCheckButton
@@ -12,16 +11,15 @@ var debug_mode: bool = false
 
 
 func _ready() -> void:
-	#debug_container.visible = false
-	pass
+	_on_debug_check_button_toggled(SceneManager.debug_mode)
 
 
 func _on_debug_check_button_toggled(toggled_on: bool) -> void:
 	if toggled_on:
-		debug_mode = true
+		SceneManager.debug_mode = true
 		debug_container.visible = true
 	else:
-		debug_mode = false
+		SceneManager.debug_mode = false
 		debug_container.visible = false
 
 

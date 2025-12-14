@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://bp12hldt2mtxq"]
 
 [ext_resource type="Script" uid="uid://cypud0blk13gu" path="res://source/ui/templates/navbar/navbar.gd" id="1_ge2q1"]
-[ext_resource type="Texture2D" uid="uid://lga36lb0o58t" path="res://addons/plenticons/icons/64x-hidpi/2d/double-chevron-left-white.png" id="1_qjn8w"]
-[ext_resource type="Texture2D" uid="uid://b2jt5g5il1xh8" path="res://addons/plenticons/icons/64x-hidpi/2d/double-chevron-right-white.png" id="2_1meuk"]
-[ext_resource type="Texture2D" uid="uid://c4h0yal0ddxtq" path="res://addons/plenticons/icons/64x-hidpi/2d/diamond-blue.png" id="3_1meuk"]
-[ext_resource type="Texture2D" uid="uid://c73e2lp0copvj" path="res://addons/plenticons/icons/64x-hidpi/2d/circle-green.png" id="3_ge2q1"]
-[ext_resource type="Texture2D" uid="uid://bgsjg5yvknkni" path="res://addons/plenticons/icons/64x-hidpi/symbols/todo-white.png" id="4_h7th5"]
-[ext_resource type="Texture2D" uid="uid://c5x6twpi3vame" path="res://addons/plenticons/icons/64x-hidpi/2d/cross-red.png" id="5_tpobu"]
+[ext_resource type="Texture2D" uid="uid://lga36lb0o58t" path="res://assets/icons/2d/double-chevron-left-white.png" id="2_ylmns"]
+[ext_resource type="Texture2D" uid="uid://b2jt5g5il1xh8" path="res://assets/icons/2d/double-chevron-right-white.png" id="3_us0d7"]
+[ext_resource type="Texture2D" uid="uid://c4h0yal0ddxtq" path="res://assets/icons/2d/diamond-blue.png" id="5_rpgc5"]
+[ext_resource type="Texture2D" uid="uid://pm4xtj7ucdq0" path="res://assets/icons/objects/globe-white.png" id="5_ylmns"]
+[ext_resource type="Texture2D" uid="uid://bgsjg5yvknkni" path="res://assets/icons/symbols/todo-white.png" id="6_jilgh"]
+[ext_resource type="Texture2D" uid="uid://c5x6twpi3vame" path="res://assets/icons/2d/cross-red.png" id="7_53xyp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1meuk"]
 bg_color = Color(0.03137255, 0.28235295, 0.62352943, 0.827451)
@@ -41,7 +41,7 @@ custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Last Page"
-icon = ExtResource("1_qjn8w")
+icon = ExtResource("2_ylmns")
 text_overrun_behavior = 1
 autowrap_mode = 2
 icon_alignment = 1
@@ -53,7 +53,7 @@ custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Next Page"
-icon = ExtResource("2_1meuk")
+icon = ExtResource("3_us0d7")
 icon_alignment = 1
 expand_icon = true
 
@@ -63,7 +63,7 @@ custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Home Page"
-icon = ExtResource("3_1meuk")
+icon = ExtResource("5_rpgc5")
 icon_alignment = 1
 expand_icon = true
 
@@ -86,7 +86,7 @@ custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Main Menu"
-icon = ExtResource("3_ge2q1")
+icon = ExtResource("5_ylmns")
 icon_alignment = 1
 expand_icon = true
 
@@ -96,7 +96,7 @@ custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Options Menu"
-icon = ExtResource("4_h7th5")
+icon = ExtResource("6_jilgh")
 icon_alignment = 1
 expand_icon = true
 
@@ -106,7 +106,7 @@ custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Quit"
-icon = ExtResource("5_tpobu")
+icon = ExtResource("7_53xyp")
 icon_alignment = 1
 expand_icon = true
 

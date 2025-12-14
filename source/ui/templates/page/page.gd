@@ -1,5 +1,5 @@
 class_name Page
 extends Control
 
-var context
+var context : TestData
 var title : String

@@ -1,9 +1,9 @@
-Panel
 PanelContainer
+Panel
+Button
 MarginContainer
 Control
 VBoxContainer
-Button
 TextureRect
 HBoxContainer
 Label
@@ -12,4 +12,3 @@ Page
 RichTextLabel
 LineEdit
 CheckButton
-Node

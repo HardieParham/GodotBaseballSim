@@ -1,14 +1,26 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1wknwb87ien"]
+[gd_scene load_steps=12 format=3 uid="uid://b1wknwb87ien"]
 
-[ext_resource type="Script" uid="uid://b8w6tfhr52j7d" path="res://source/ui/templates/page/page.gd" id="1_rgs33"]
+[ext_resource type="Script" uid="uid://bk0u0sy7d1waw" path="res://source/ui/views/main_menu/main_menu.gd" id="1_3lwh1"]
 [ext_resource type="Texture2D" uid="uid://ol20bgbstk4m" path="res://assets/images/Baseball1.jpeg" id="2_8ray3"]
 [ext_resource type="PackedScene" uid="uid://bp12hldt2mtxq" path="res://source/ui/templates/navbar/navbar.tscn" id="2_yf0wl"]
 [ext_resource type="PackedScene" uid="uid://hhk3ntfnj477" path="res://source/ui/templates/footer/footer.tscn" id="3_yf0wl"]
 [ext_resource type="Texture2D" uid="uid://cbip2qtg01yeu" path="res://assets/images/logo.png" id="4_s2fnd"]
+[ext_resource type="Texture2D" uid="uid://c4h0yal0ddxtq" path="res://addons/plenticons/icons/64x-hidpi/2d/diamond-blue.png" id="5_81em6"]
+[ext_resource type="Texture2D" uid="uid://bgsjg5yvknkni" path="res://addons/plenticons/icons/64x-hidpi/symbols/todo-white.png" id="5_s2fnd"]
+[ext_resource type="Texture2D" uid="uid://lqii8iux74vh" path="res://addons/plenticons/icons/64x-hidpi/2d/plus-green.png" id="6_6uoa4"]
+[ext_resource type="Texture2D" uid="uid://c5x6twpi3vame" path="res://addons/plenticons/icons/64x-hidpi/2d/cross-red.png" id="9_i637a"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mcpvh"]
 texture = ExtResource("2_8ray3")
 modulate_color = Color(0.29954746, 0.29954746, 0.29954743, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_81em6"]
+bg_color = Color(0.95686275, 0.9529412, 0.9607843, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -17,7 +29,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_rgs33")
+script = ExtResource("1_3lwh1")
 metadata/_custom_type_script = "uid://b8w6tfhr52j7d"
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
@@ -60,7 +72,13 @@ theme_override_constants/margin_top = 100
 theme_override_constants/margin_right = 130
 theme_override_constants/margin_bottom = 100
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer"]
+clip_children = 2
+clip_contents = true
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_81em6")
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer/PanelContainer"]
 layout_mode = 2
 texture = ExtResource("4_s2fnd")
 expand_mode = 2
@@ -77,31 +95,44 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Button" type="Button" parent="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+[node name="ContinueButton" type="Button" parent="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 32
 text = "Continue Game"
+icon = ExtResource("5_81em6")
 
-[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+[node name="NewGameButton" type="Button" parent="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 32
 text = "New Game"
+icon = ExtResource("6_6uoa4")
 
-[node name="Button3" type="Button" parent="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+[node name="OptionsButton" type="Button" parent="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 32
 text = "Options"
+icon = ExtResource("5_s2fnd")
 
-[node name="Button4" type="Button" parent="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+[node name="QuitButton" type="Button" parent="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 32
-text = "Credits / About"
+text = "Quit"
+icon = ExtResource("9_i637a")
 
 [node name="Footer" parent="PanelContainer/VBoxContainer" instance=ExtResource("3_yf0wl")]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.75
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
