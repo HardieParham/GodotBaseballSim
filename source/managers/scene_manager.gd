@@ -5,6 +5,7 @@ enum SceneName {
 	MainMenu,
 	Options,
 	GameSetup,
+	HomeView,
 }
 
 
@@ -12,12 +13,14 @@ var scenes := {
 	SceneName.MainMenu: "res://source/ui/views/main_menu/main_menu.tscn",
 	SceneName.Options: "res://source/ui/views/options/options.tscn",
 	SceneName.GameSetup: "res://source/ui/views/game_setup/game_setup.tscn",
+	SceneName.HomeView: "res://source/ui/views/home_view/home_view.tscn",
 }
 
 
 var debug_mode : bool = false
 var scene_history: Array = [[0, {"title": "Poop"}]]
 var current_scene_position: int = 0
+var side_menu_to_left: bool = true
 
 
 func add_scene_history(scene: SceneName, context: Dictionary) -> void:

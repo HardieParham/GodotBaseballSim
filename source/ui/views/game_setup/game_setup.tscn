@@ -112,7 +112,7 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.5
 color = Color(0.0017251024, 0, 0.5883891, 1)
 
-[node name="Button" type="Button" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+[node name="StartGameButton" type="Button" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Start Game"
@@ -121,3 +121,5 @@ text = "Start Game"
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.75
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]

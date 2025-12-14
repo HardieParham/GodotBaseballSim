@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://d4bt113roe2f0"]
+[gd_scene load_steps=5 format=3 uid="uid://d4bt113roe2f0"]
 
 [ext_resource type="Script" uid="uid://bxpbenwfhwav8" path="res://source/ui/views/home_view/home_view.gd" id="1_gs43h"]
 [ext_resource type="PackedScene" uid="uid://bp12hldt2mtxq" path="res://source/ui/templates/navbar/navbar.tscn" id="2_hkwiy"]
+[ext_resource type="PackedScene" uid="uid://4xh7ofg8tp6l" path="res://source/ui/templates/side_menu/side_menu.tscn" id="3_qlpqd"]
 [ext_resource type="PackedScene" uid="uid://hhk3ntfnj477" path="res://source/ui/templates/footer/footer.tscn" id="3_s5jjo"]
 
 [node name="Page" type="Control"]
@@ -30,10 +31,26 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 1.5
 
-[node name="Control" type="Control" parent="PanelContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 17.0
+
+[node name="SideMenu" parent="PanelContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_qlpqd")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control" type="Control" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 6.0
+
+[node name="SideMenu2" parent="PanelContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_qlpqd")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="Footer" parent="PanelContainer/VBoxContainer" instance=ExtResource("3_s5jjo")]
 layout_mode = 2
