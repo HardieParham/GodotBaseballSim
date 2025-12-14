@@ -21,9 +21,9 @@ config/icon="uid://cbip2qtg01yeu"
 
 [autoload]
 
-QueryManager="*res://source/managers/query_manager.gd"
-SceneManager="*res://source/managers/scene_manager.gd"
-GameManager="*res://source/managers/game_manager.gd"
+QueryManager="*res://source/scripts/managers/query_manager.gd"
+SceneManager="*res://source/scripts/managers/scene_manager.gd"
+GameManager="*res://source/scripts/managers/game_manager.gd"
 
 [display]
 
@@ -38,14 +38,13 @@ project/assembly_name="231231 Test"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot-sqlite/plugin.cfg", "res://addons/gut/plugin.cfg", "res://addons/plenticons/plugin.cfg", "res://addons/script-ide/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot-sqlite/plugin.cfg", "res://addons/gut/plugin.cfg", "res://addons/script-ide/plugin.cfg")
 
 [file_customization]
 
 folder_colors={
 "res://assets/": "orange",
 "res://source/": "red",
-"res://source/managers/": "purple",
 "res://source/ui/": "green"
 }
 

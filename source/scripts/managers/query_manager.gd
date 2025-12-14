@@ -16,17 +16,23 @@ func query(): # For complex Queries
 	var results : Array = db.query_result
 
 
-func create_table():
-	var table_name = ""
+func create_table(table_name: String) -> void:
 	var table = {
-		#add columns here
+		"id": {
+			"data_type": "int", 
+			"primary_key": true, 
+			"auto_increment": true
+			},
+		"name": {
+			"data_type": "text", 
+		}
 	}
 	db.create_table(table_name, table)
 
 
-func drop_table():
-	db.drop_table("table_name")
-	pass
+func drop_table(table_name: String) -> void:
+	db.drop_table(table_name)
+	print_debug('table dropped: ' + table_name)
 
 
 func insert_row():
