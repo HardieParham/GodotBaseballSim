@@ -3,15 +3,16 @@ extends Node
 
 enum SceneName {
 	MainMenu,
-	TestPage,
+	Options,
 }
 
 var scenes := {
 	SceneName.MainMenu: "res://source/ui/views/main_menu/main_menu.tscn",
-	SceneName.TestPage: "res://source/ui/views/test_page/test_page.tscn",
+	SceneName.Options: "res://source/ui/views/options/options.tscn",
 }
 
 var debug_mode : bool = false
+
 
 
 func go_to_scene(scene: SceneName, context: Dictionary):

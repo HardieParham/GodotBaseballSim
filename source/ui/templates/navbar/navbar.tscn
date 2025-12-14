@@ -15,7 +15,7 @@ bg_color = Color(0.03137255, 0.28235295, 0.62352943, 0.827451)
 layout_mode = 3
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 75.0
+offset_bottom = 74.0
 grow_horizontal = 2
 script = ExtResource("1_ge2q1")
 
@@ -28,14 +28,21 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1meuk")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="BackButton" type="Button" parent="PanelContainer/HBoxContainer/HBoxContainer"]
+[node name="BackButton" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
@@ -47,7 +54,7 @@ autowrap_mode = 2
 icon_alignment = 1
 expand_icon = true
 
-[node name="NextButton" type="Button" parent="PanelContainer/HBoxContainer/HBoxContainer"]
+[node name="NextButton" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
@@ -57,7 +64,7 @@ icon = ExtResource("3_us0d7")
 icon_alignment = 1
 expand_icon = true
 
-[node name="HomeButton" type="Button" parent="PanelContainer/HBoxContainer/HBoxContainer"]
+[node name="HomeButton" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
@@ -67,7 +74,7 @@ icon = ExtResource("5_rpgc5")
 icon_alignment = 1
 expand_icon = true
 
-[node name="MainLabel" type="Label" parent="PanelContainer/HBoxContainer"]
+[node name="MainLabel" type="Label" parent="PanelContainer/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -76,11 +83,11 @@ theme_override_font_sizes/font_size = 42
 text = "Godot Baseball Sim"
 horizontal_alignment = 1
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/HBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MainMenuButton" type="Button" parent="PanelContainer/HBoxContainer/HBoxContainer2"]
+[node name="MainMenuButton" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
@@ -90,7 +97,7 @@ icon = ExtResource("5_ylmns")
 icon_alignment = 1
 expand_icon = true
 
-[node name="OptionsButton" type="Button" parent="PanelContainer/HBoxContainer/HBoxContainer2"]
+[node name="OptionsButton" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
@@ -100,7 +107,7 @@ icon = ExtResource("6_jilgh")
 icon_alignment = 1
 expand_icon = true
 
-[node name="QuitButton" type="Button" parent="PanelContainer/HBoxContainer/HBoxContainer2"]
+[node name="QuitButton" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
@@ -110,9 +117,9 @@ icon = ExtResource("7_53xyp")
 icon_alignment = 1
 expand_icon = true
 
-[connection signal="pressed" from="PanelContainer/HBoxContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="PanelContainer/HBoxContainer/HBoxContainer/NextButton" to="." method="_on_next_button_pressed"]
-[connection signal="pressed" from="PanelContainer/HBoxContainer/HBoxContainer/HomeButton" to="." method="_on_home_button_pressed"]
-[connection signal="pressed" from="PanelContainer/HBoxContainer/HBoxContainer2/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
-[connection signal="pressed" from="PanelContainer/HBoxContainer/HBoxContainer2/OptionsButton" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="PanelContainer/HBoxContainer/HBoxContainer2/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/HBoxContainer/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/HBoxContainer/HomeButton" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/HBoxContainer2/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/HBoxContainer2/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/HBoxContainer2/QuitButton" to="." method="_on_quit_button_pressed"]

@@ -8,7 +8,7 @@ extends Page
 
 
 func _ready() -> void:
-	continue_button.disabled = true
+	continue_button.disabled = !GameManager.active_game
 
 
 func _on_continue_button_pressed() -> void:
@@ -20,7 +20,9 @@ func _on_new_game_button_pressed() -> void:
 
 
 func _on_options_button_pressed() -> void:
-	pass # Replace with function body.
+	print('Test Page')
+	var request = {"title": "Poop"}
+	SceneManager.go_to_scene(SceneManager.SceneName.Options, request)
 
 
 func _on_quit_button_pressed() -> void:

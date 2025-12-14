@@ -23,6 +23,7 @@ config/icon="uid://cbip2qtg01yeu"
 
 QueryManager="*res://source/managers/query_manager.gd"
 SceneManager="*res://source/managers/scene_manager.gd"
+GameManager="*res://source/managers/game_manager.gd"
 
 [display]
 

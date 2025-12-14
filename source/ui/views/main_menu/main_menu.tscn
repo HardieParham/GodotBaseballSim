@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://bp12hldt2mtxq" path="res://source/ui/templates/navbar/navbar.tscn" id="2_yf0wl"]
 [ext_resource type="PackedScene" uid="uid://hhk3ntfnj477" path="res://source/ui/templates/footer/footer.tscn" id="3_yf0wl"]
 [ext_resource type="Texture2D" uid="uid://cbip2qtg01yeu" path="res://assets/images/logo.png" id="4_s2fnd"]
-[ext_resource type="Texture2D" uid="uid://c4h0yal0ddxtq" path="res://addons/plenticons/icons/64x-hidpi/2d/diamond-blue.png" id="5_81em6"]
-[ext_resource type="Texture2D" uid="uid://bgsjg5yvknkni" path="res://addons/plenticons/icons/64x-hidpi/symbols/todo-white.png" id="5_s2fnd"]
-[ext_resource type="Texture2D" uid="uid://lqii8iux74vh" path="res://addons/plenticons/icons/64x-hidpi/2d/plus-green.png" id="6_6uoa4"]
-[ext_resource type="Texture2D" uid="uid://c5x6twpi3vame" path="res://addons/plenticons/icons/64x-hidpi/2d/cross-red.png" id="9_i637a"]
+[ext_resource type="Texture2D" uid="uid://c4h0yal0ddxtq" path="res://assets/icons/2d/diamond-blue.png" id="5_81em6"]
+[ext_resource type="Texture2D" uid="uid://bgsjg5yvknkni" path="res://assets/icons/symbols/todo-white.png" id="5_s2fnd"]
+[ext_resource type="Texture2D" uid="uid://lqii8iux74vh" path="res://assets/icons/2d/plus-green.png" id="6_6uoa4"]
+[ext_resource type="Texture2D" uid="uid://c5x6twpi3vame" path="res://assets/icons/2d/cross-red.png" id="9_i637a"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mcpvh"]
 texture = ExtResource("2_8ray3")

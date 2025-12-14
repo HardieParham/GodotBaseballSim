@@ -31,7 +31,7 @@ func _on_main_menu_button_pressed() -> void:
 func _on_options_button_pressed() -> void:
 	print('Test Page')
 	var context = {"title": "Poop"}
-	SceneManager.go_to_scene(SceneManager.SceneName.TestPage, context)
+	SceneManager.go_to_scene(SceneManager.SceneName.Options, context)
 
 
 func _on_quit_button_pressed() -> void:

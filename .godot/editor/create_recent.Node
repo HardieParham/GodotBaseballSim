@@ -1,12 +1,12 @@
+VBoxContainer
+Label
+HBoxContainer
 PanelContainer
+MarginContainer
 Panel
 Button
-MarginContainer
 Control
-VBoxContainer
 TextureRect
-HBoxContainer
-Label
 HSeparator
 Page
 RichTextLabel
