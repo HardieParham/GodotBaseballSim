@@ -11,11 +11,15 @@ extends Control
 
 
 func _on_back_button_pressed() -> void:
-	pass # Replace with function body.
+	var last_scene_info = SceneManager.get_back_scene()
+	if last_scene_info.size() > 0:
+		SceneManager.go_to_scene(last_scene_info[0], last_scene_info[1], false)
 
 
 func _on_next_button_pressed() -> void:
-	pass # Replace with function body.
+	var next_scene_info = SceneManager.get_next_scene()
+	if next_scene_info.size() > 0:
+		SceneManager.go_to_scene(next_scene_info[0], next_scene_info[1], false)
 
 
 func _on_home_button_pressed() -> void:
