@@ -10,6 +10,10 @@ extends Control
 @onready var main_label: Label = %MainLabel
 
 
+func _ready() -> void:
+	home_button.disabled = !GameManager.active_game
+
+
 func _on_back_button_pressed() -> void:
 	var last_scene_info = SceneManager.get_back_scene()
 	if last_scene_info.size() > 0:

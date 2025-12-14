@@ -93,7 +93,6 @@ text = "Primary Color"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.5
-text = "Click for color selection"
 color = Color(0.38464698, 5.8358535e-07, 1.6845763e-07, 1)
 edit_alpha = false
 edit_intensity = false

@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4bt113roe2f0"]
+
+[ext_resource type="Script" uid="uid://bxpbenwfhwav8" path="res://source/ui/views/home_view/home_view.gd" id="1_gs43h"]
+[ext_resource type="PackedScene" uid="uid://bp12hldt2mtxq" path="res://source/ui/templates/navbar/navbar.tscn" id="2_hkwiy"]
+[ext_resource type="PackedScene" uid="uid://hhk3ntfnj477" path="res://source/ui/templates/footer/footer.tscn" id="3_s5jjo"]
+
+[node name="Page" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gs43h")
+metadata/_custom_type_script = "uid://b8w6tfhr52j7d"
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Navbar" parent="PanelContainer/VBoxContainer" instance=ExtResource("2_hkwiy")]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.5
+
+[node name="Control" type="Control" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 17.0
+
+[node name="Footer" parent="PanelContainer/VBoxContainer" instance=ExtResource("3_s5jjo")]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.75
